@@ -1,0 +1,130 @@
+/* --- ESTILO GERAL (Dark Theme) --- */
+body {
+  background-color: #141414;
+  color: white;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  color: #E50914;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #b3b3b3;
+}
+
+/* --- LAYOUT E CONTEÚDO --- */
+.main-content {
+  padding-top: 80px; /* Espaço para a navbar não cobrir o texto */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* --- FORMULÁRIOS --- */
+.form-box {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #444;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  box-sizing: border-box; /* Garante que o padding não quebre o layout */
+}
+
+/* --- BOTÕES --- */
+button {
+  cursor: pointer;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #E50914;
+  color: white;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #f40612;
+}
+
+.btn-delete {
+  background-color: transparent;
+  border: 1px solid #666;
+  color: #999;
+  margin-top: 10px;
+}
+
+.btn-delete:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* --- CARDS (User, Reviews, Photos) --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #2f2f2f;
+  padding: 20px;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #3a3a3a;
+}
