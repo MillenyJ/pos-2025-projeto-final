@@ -1,7 +1,16 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000", // O endereço do seu json-server
+
+  baseURL: "http://127.0.0.1:8000", 
+});
+
+
+api.interceptors.request.use((config) => {
+  if (config.url && !config.url.endsWith("/")) {
+    config.url += "/";
+  }
+  return config;
 });
 
 export default api;
